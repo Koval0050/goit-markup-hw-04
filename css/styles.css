@@ -90,8 +90,10 @@ button {
 
 /*========================NAVIGATION====================*/
 .header {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.368);
+  border-bottom: 1px solid #e7e9fc;
   padding: 24px 0;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .header-container {
   display: flex;
@@ -144,7 +146,15 @@ button {
 /*========================HERO====================*/
 
 .hero {
-  background-color: var(--main-dark-color);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background: rgba(46, 47, 66, 0.7); */
+  /* background-color: var(--main-dark-color); */
   padding-top: 188px;
   padding-bottom: 188px;
 }
@@ -169,6 +179,7 @@ button {
   border-radius: 4px;
   padding: 16px 32px;
   min-width: 180px;
+  border: 0;
 }
 .modal-btn-center {
   text-align: center;
@@ -208,7 +219,7 @@ button {
 /*========================/TEXT STYLE====================*/
 
 /*========================FILTER====================*/
-.filter{
+.filter {
   padding-top: 100px;
   padding-bottom: 120px;
 }
@@ -252,6 +263,33 @@ button {
   color: #e7e9fc;
   width: 264px;
 }
+.media {
+  color: #fff;
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+.footer-container {
+  display: flex;
+}
+.footer-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--main-light-color);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
+.footer-icon-container:hover,
+.footer-icon-container:focus {
+  background-color: #31d0aa;
+}
+.social-media {
+  margin-left: 120px;
+}
 /*========================/FOOTER====================*/
 
 /*========================TEAM CARD====================*/
@@ -264,12 +302,23 @@ button {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
 }
+.card-filter {
+  border: 1px solid #e7e9fc;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+  flex-basis: calc((100% - 96px) / 3);
+  cursor: pointer;
+}
+.card-filter:hover,
+.card-filter:focus {
+  border: 0.5px solid #f4f4fd;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  
+}
 .team-card-width {
   flex-basis: calc((100% - 72px) / 4);
 }
-.filter-card-width {
-  flex-basis: calc((100% - 96px) / 3);
-}
+
 .team-card-text {
   padding-top: 32px;
   padding-bottom: 32px;
@@ -277,3 +326,51 @@ button {
 }
 
 /*========================/TEAM CARD====================*/
+.big-svg {
+  background-color: #f4f4fd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 112px;
+  width: 264px;
+  margin-bottom: 8px;
+}
+.list-icon {
+  justify-content: center;
+  margin-top: 8px;
+}
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--main-light-color);
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
+.icon-container:hover,
+.icon-container:focus {
+  background-color: #404bbf;
+}
+.list-client {
+  margin: 0 auto;
+}
+.client-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #8e8f99;
+  fill: #8e8f99;
+  border-radius: 4px;
+  width: 168px;
+  height: 88px;
+}
+.client-container:hover,
+.client-container:focus {
+  border-color: #404bbf;
+}
+.client-container > svg:hover,
+.client-container > svg:focus {
+  fill: #404bbf;
+}
