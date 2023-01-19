@@ -153,8 +153,7 @@ button {
     url(../images/people-office.png);
   background-repeat: no-repeat;
   background-size: cover;
-  /* background: rgba(46, 47, 66, 0.7); */
-  /* background-color: var(--main-dark-color); */
+  background-color: var(--main-dark-color);
   padding-top: 188px;
   padding-bottom: 188px;
 }
