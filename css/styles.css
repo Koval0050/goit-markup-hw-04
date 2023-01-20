@@ -152,7 +152,8 @@ button {
     ),
     url(../images/people-office.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: center center;
+  background-size: 1440px, 1440px, cover;
   background-color: var(--main-dark-color);
   padding-top: 188px;
   padding-bottom: 188px;
@@ -186,6 +187,7 @@ button {
 .modal-btn:hover,
 .modal-btn:focus {
   background-color: var(--color-hover-effect);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 /*========================/HERO====================*/
 
@@ -244,11 +246,14 @@ button {
 .btn-filter:focus {
   background: var(--color-hover-effect);
   color: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .text-filter-card {
   padding-left: 16px;
   padding-top: 32px;
   padding-bottom: 32px;
+  border: 1px solid #e7e9fc;
+  border-top: 0;
 }
 /*========================/FILTER====================*/
 
@@ -301,8 +306,16 @@ button {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
 }
+.team-card-width {
+  flex-basis: calc((100% - 72px) / 4);
+}
+
+.team-card-text {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  text-align: center;
+}
 .card-filter {
-  border: 1px solid #e7e9fc;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
   flex-basis: calc((100% - 96px) / 3);
   cursor: pointer;
@@ -312,16 +325,6 @@ button {
   border: 0.5px solid #f4f4fd;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  
-}
-.team-card-width {
-  flex-basis: calc((100% - 72px) / 4);
-}
-
-.team-card-text {
-  padding-top: 32px;
-  padding-bottom: 32px;
-  text-align: center;
 }
 
 /*========================/TEAM CARD====================*/
@@ -366,10 +369,11 @@ button {
   height: 88px;
 }
 .client-container:hover,
-.client-container:focus {
+.client-container:focus{
   border-color: #404bbf;
 }
-.client-container > svg:hover,
-.client-container > svg:focus {
+.client-container:hover svg,
+.client-container:focus svg {
   fill: #404bbf;
+
 }
